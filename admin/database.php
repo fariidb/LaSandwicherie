@@ -18,7 +18,7 @@ class Database
 
         catch(PDOException $e)
         {
-            die($e->getMessage());
+            "problème de connexion à la db".$e->getMessage();
         }
         return self::$connection;
     }

@@ -16,7 +16,7 @@
     <div class="container">
         <div class="divider"></div>
         <div class="heading">
-            <h2 class="text-logo">formulaires de contact</h2>
+            <h2 class="text-logo">Votre Avis Nous interesse !</h2>
         </div>
 
         <div class="row">

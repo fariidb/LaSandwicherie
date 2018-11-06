@@ -12,7 +12,6 @@
 </head>
 
 <body>
-<h1 class="text-logo"><span class="glyphicon glyphicon-cutlery"></span> La Sandwicherie <span class="glyphicon glyphicon-cutlery"></span></h1>
 <h1 class="text-logo"> Administration </h1>
 
 <div class="container admin">

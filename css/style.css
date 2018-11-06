@@ -1,6 +1,6 @@
 body
 {
-    background: url("../img/bg.png");
+    /* background: url("../img/bg.png");  */
 }
 .site
 {
@@ -93,7 +93,7 @@ body
 /* ADMIN*/
 .row
 {
-    background-color: #fff;
+    background-color: white;
     padding: 50px;
     border-radius: 10px;
 }
@@ -155,7 +155,7 @@ p.red
 #button2
 {
     border: 1px solid #ddd;
-    background: greenyellow;
+    background: darkgreen;
     color: white;
     width: 100%;
     font-weight: bold;

@@ -14,7 +14,7 @@
 </head>
 
 <body>
-<h1 class="text-logo"> Panier </h1>
+<h1 class="text-logo"><span class="glyphicon glyphicon-shopping-cart"></span> Panier </h1>
 
 <div class="container admin">
     <div class="row">
