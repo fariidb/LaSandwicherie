@@ -16,10 +16,11 @@
     <div class="container">
         <div class="divider"></div>
         <div class="heading">
-            <h2 class="text-logo">Votre Avis Nous interesse !</h2>
+
         </div>
 
         <div class="row">
+            <a class="btn btn-danger" href="?page=home"> retour</a>
             <div class="col-lg-10 col-lg-offset-1">
                 <form id="contact-form" method="post" action="" role="form">
                     <div class="row">

@@ -9,7 +9,7 @@ class Database
 
     private static $connection = null;
 
-   public static function connect()
+public static function connect()
     {
         try
         {

@@ -12,7 +12,7 @@ if(isset($_GET['cat'])){
 }
     // verifier si la table categorie est n'est pas vide
     if($categories):
-        // creer un foreach pour visualiser les donées
+        // creer un foreach pour visualiser les données
         foreach ($categories as $key => $value) {
             if($categories[$key]['id'] == $cat){
 ?>

@@ -49,7 +49,7 @@
                         echo ' ';
                         echo '<a class="btn btn-primary" href="update.php?id='. $item['id'] .'"><span class="glyphicon glyphicon-pencil"></span> Modifer</a>';
                         echo ' ';
-                        echo '<a class="btn btn-danger" href="delete.php?id=' . $item['id'] .'"><span class="glyphicon glyphicon-remove"></span> Supprimer</a>';
+                        echo '<a class="btn btn-danger" href="delete.php?id=' . $item['id'] .'"><span class="glyphicon glyphicon-trash"></span> Supprimer</a>';
                         echo '</td>';
                         echo '</tr>';
                     }

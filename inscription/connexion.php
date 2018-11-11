@@ -55,11 +55,11 @@
 </head>
 
 <body>
-<h1 class="text-logo"> Connexion</h1>
+<h1 class="text-logo">Connexion à mon compte</h1>
 
 <div class="container admin">
     <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-6">
                 <?php
                 if (isset($_GET['error']))
                 {
@@ -90,9 +90,16 @@
                     <a class="btn btn-danger" href="../index.php"> retour</a>
                 </div>
             </form>
-            <br>
-            <p> Pas encore inscrit ? <a href="index.php"> Inscrivez-vous</a></p>
-        </div>
+    </div>
+
+    <div class="row">
+            <div class="col-sm-6 compte">
+                <h2>C'est ma 1ère commande sur le site</h2>
+            <p> Je crée mon compte La Sandwicherie. C'est rapide ! </p>
+
+            <a href="index.php" class="btn btn-default"><span class="glyphicon glyphicon-chevron-right"></span> Créer mon compte</a>
+            </div>
+    </div>
 
 </body>
 

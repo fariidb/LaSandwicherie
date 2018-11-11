@@ -1,18 +1,21 @@
 body
 {
-    /* background: url("../img/bg.png");  */
+    background: url("../img/bg.png");
 }
 .site
 {
-    font-family: 'Holtwood One SC', serif;
+    /* font-family: 'Holtwood One SC', serif; */
+    font-family: 'Anton', sans-serif
 }
 .text-logo
 {
-    font-family: 'Holtwood One SC', serif;
-    color: #e7480f;
+    /* font-family: 'Holtwood One SC', serif; */
+    font-family: 'Anton', sans-serif;
+    color:#E25501;
     text-shadow: 2px 2px #ffd301;
     font-size: 50px;
     padding: 40px 0px;
+    text-decoration: none;
     text-align: center;
 }
 .text-logo .glyphicon
@@ -26,11 +29,11 @@ body
 }
 .thumbnail img
 {
-    background: #ffd301;
+    background: #2D3664;
 }
 .price
 {
-    background: #5cb85c;
+    background: #95d420;
     box-shadow: 0 1px rgba(0,0,0,0.2);
     -moz-box-shadow: 0 1px rgba(0,0,0,0.2);
     -webkit-box-shadow: 0 1px rgba(0,0,0,0.2);
@@ -55,16 +58,16 @@ body
 }
 .caption > h4
 {
-    color: #e7480f;
+    color: #726353;
     font-size: 18px;
 }
 .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover
 {
-    background: #e7480f;
+    background: #95d420;
 }
 .nav>li>a:focus, .nav>li>a:hover
 {
-    color: #e7480f;
+    color: #E25501;
     background-color: #eee;
 }
 .nav>li>a
@@ -79,14 +82,20 @@ body
     padding: 10px;
     font-size: 16px;
     color: #fff;
-    background-color: #e7480f;
+    background-color: #E25501;
     text-decoration: none;
     text-shadow: 2px 2px #333;
+    -webkit-transform: scale(1);
+	transform: scale(0.9);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
 }
 .btn-order:hover, .btn-order:focus
 {
     color: #fff;
-    background-color: #c13c0d;
+    background-color: #E25501;
+    -webkit-transform: scale(1.3);
+	transform: scale(1);
 }
 
 
@@ -180,4 +189,41 @@ p.red
     margin-top: 15px;
     font-weight: bold;
     font-size: 22px;
+}
+.compte
+{
+    border: 2px solid black;
+    margin-top: -25px;
+    padding: 10px;
+}
+footer h3 {
+    text-align: center;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+}
+footer h3, footer h4 {
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+/* PANIER */
+
+#TotalPanier
+{
+    font-size: 30px;
+    color: #E25501;
+}
+#LabelTotalPanier
+{
+    font-size: 20px;
+}
+.ttc
+{
+    border: 1px solid transparent;
+}
+.qte
+{
+    border: 1px solid transparent;
 }

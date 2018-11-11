@@ -112,11 +112,9 @@ require ('../admin/database.php');
                             <label for="password">Mot de passe <span class="red">*</span></label>
                             <input type="password" class="form-control" name="password" id="password" placeholder="Ex: ******" required>
                         </div>
-                        <br>
-                        <!--confirmation Password -->
                         <div class="mb-3">
-                            <label for="password_confirm">Confirmation du mot de passe <span class="red">*</span></label>
-                            <input type="password" class="form-control" name="password_confirm" id="password_confirm" required>
+                            <label for="password">Confirmer le Mot de passe <span class="red">*</span></label>
+                            <input type="password" class="form-control" name="password" id="password" placeholder="Ex: ******" required>
                         </div>
                         <br>
                         <div class="col-md-12">
