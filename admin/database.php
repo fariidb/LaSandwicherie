@@ -1,3 +1,5 @@
+
+
 <?php
 
 class Database
@@ -6,7 +8,6 @@ class Database
     private static $dbName = "rtm_db";
     private static $dbUser = "root";
     private static $dbUserPassword = "root";
-
     private static $connection = null;
 
 public static function connect()
@@ -28,8 +29,5 @@ public static function connect()
         self::$connection = null;
     }
 
-
 }
-
-
 ?>

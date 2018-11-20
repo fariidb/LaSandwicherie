@@ -39,7 +39,19 @@ if(isset($_GET['page'])){
             require_once './app/public/contact/contact.model.php';
             require_once './app/public/contact/contact.view.php';
 
-    break;
+        break;
+        case 'connexion':
+
+        require_once './app/public/inscription/connexion.model.php';
+        require_once './app/public/inscription/connexion.view.php';
+
+        break;
+        case 'inscription':
+
+        require_once './app/public/inscription/inscription.model.php';
+        require_once './app/public/inscription/inscription.view.php';
+
+        break;
     }
 }else {
 

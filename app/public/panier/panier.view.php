@@ -28,14 +28,9 @@
                     </th>
                     <th  class="panier-form"><a class="btn" href="?page=panier&delete=<?= $key['id'] ?>" ><i class="glyphicon glyphicon-trash"></i></a></th>
                 </tr>
-
-
             <?php
-
             }
-
             ?>
-
 </form>
             </tbody>
 

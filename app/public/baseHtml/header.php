@@ -1,6 +1,8 @@
+
+
 <!doctype html>
 <html>
-<!-------------------------------------------------------------- PAGE D'ACCUEIL -------------------------------------------------------------->
+
 <head>
     <title>La Sandwicherie</title>
     <meta charset="utf-8"/>
@@ -16,7 +18,7 @@
 <div class="container site">
 <!-- Connexion - inscription - deconnexion - contact - admin-->
     <div class="form_actions">
-        <a class="btn btn-success" href="./inscription/connexion.php"><span class="glyphicon glyphicon-user"></span> | Mon compte</a>
+        <a class="btn btn-success" href="?page=connexion"><span class="glyphicon glyphicon-user"></span> | Mon compte</a>
         <!-- <a class="btn btn-danger" href="./inscription/deconnexion.php"><span class="glyphicon glyphicon-off"></span> Deconnexion</a> -->
         <a class="btn btn-info" href="?page=contact">Contact</a>
         <a class="btn btn-warning" href="./admin/index.php"><span class="glyphicon glyphicon-star"></span> | Admin</a>

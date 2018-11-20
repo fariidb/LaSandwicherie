@@ -1,7 +1,5 @@
 <?php
 
-
-
 $run = false ;
 
 if(isset($_GET['id'])){
