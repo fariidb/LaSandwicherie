@@ -1,5 +1,3 @@
-
-
 <!doctype html>
 <html>
 
@@ -16,13 +14,33 @@
 
 <body>
 <div class="container site">
-<!-- Connexion - inscription - deconnexion - contact - admin-->
+<!------------------------------------------------ Connexion - inscription - deconnexion - contact - admin ------------------------------------------------>
     <div class="form_actions">
-        <a class="btn btn-success" href="?page=connexion"><span class="glyphicon glyphicon-user"></span> | Mon compte</a>
-        <!-- <a class="btn btn-danger" href="./inscription/deconnexion.php"><span class="glyphicon glyphicon-off"></span> Deconnexion</a> -->
-        <a class="btn btn-info" href="?page=contact">Contact</a>
+    <?php
+        if($_SESSION['connect'] != null){
+    ?>
+        <a class="btn btn-success" href="?page=monCompte"><span class="glyphicon glyphicon-user"></span> | Mon compte</a>
+        <a class="btn btn-danger" href="?page=deconnexion"><span class="glyphicon glyphicon-off"></span> Deconnexion</a>
+    <?php
+        }else{
+    ?>
+        <a class="btn btn-success" href="?page=connexion"><span class="glyphicon glyphicon-user"></span> | Connexion</a>
+
+    <?php
+        }
+    ?>
+
+    <?php
+        if($_SESSION['connect']['role'] == "admin"){
+    ?>
         <a class="btn btn-warning" href="./admin/index.php"><span class="glyphicon glyphicon-star"></span> | Admin</a>
-        <a class="btn btn-dark" href="?page=panier"> <span class="glyphicon glyphicon-shopping-cart"></span> | Mon Panier (<?= count($_SESSION['panier']); ?>)</a>
+        <a class="btn btn-warning" href="?page=mesMessage"><span class="glyphicon glyphicon-star"></span> | Messages <?= $_SESSION['message'] ?></a>
+    <?php
+        }
+    ?>
+
+        <a class="btn btn-info" href="?page=contact">Contact</a>
+        <a class="btn btn-dark" href="?page=panier"> <span class="glyphicon glyphicon-shopping-cart"></span> | Mon Panier (<?php if($_SESSION['panier']): echo count($_SESSION['panier']); endif; ?>)</a>
     </div>
 
     <a href="?page=home"><h1 class="text-logo"><span class="glyphicon glyphicon-cutlery"></span> La Sandwicherie <span class="glyphicon glyphicon-cutlery"></span></h1></a>

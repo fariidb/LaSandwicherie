@@ -2,7 +2,6 @@
 
     // CONNEXION A LA DB
     $db = Database::connect();
-    // recuperartion tout data dans la table category
+    // recuperation des données dans la table categories
     $statement = $db->query('SELECT * FROM categories');
-    
     $categories = $statement->fetchAll();

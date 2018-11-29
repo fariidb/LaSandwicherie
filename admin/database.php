@@ -1,11 +1,10 @@
-
-
 <?php
 
 class Database
 {
     private static $dbHost = "localhost";
-    private static $dbName = "rtm_db";
+    private static $dbName = "sandwicherie_db";
+    // private static $dbPort = 3306;
     private static $dbUser = "root";
     private static $dbUserPassword = "root";
     private static $connection = null;
@@ -31,3 +30,5 @@ public static function connect()
 
 }
 ?>
+
+

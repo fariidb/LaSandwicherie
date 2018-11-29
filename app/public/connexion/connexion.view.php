@@ -1,19 +1,19 @@
-
-
 <div class="container admin">
     <div class="row">
             <div class="col-sm-6">
+
+                <form method="post" action="">
                 <?php
-                if (isset($_GET['error']))
-                {
-                    echo '<div id="error" class="alert alert-danger" role="alert"> Nous ne pouvons pas vous authentifiez</div>';
-                }
-                elseif (isset($_GET['success']))
-                {
-                    echo '<div class="alert alert-success" role="alert"> Vous etes connecté</div>';
-                }
+                    if($_SESSION['error'] != null){
                 ?>
-            <form method="post" action="connexion.php">
+                    <div class="alert alert-<?= $_SESSION['error']['color']  ?>" role="alert">
+                    <?= $_SESSION['error']['msg'] ?>
+                    </div>
+
+                <?php
+                    $_SESSION['error'] = null;
+                    }
+                ?>
 
                 <!--Email-->
                 <div class="mb-3">
@@ -21,6 +21,7 @@
                     <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
                 </div>
                 <br>
+
                 <!--Password -->
                 <div class="mb-3">
                     <label for="password">Mot de passe</label>
@@ -38,9 +39,9 @@
     <div class="row">
             <div class="col-sm-6 compte">
                 <h2>C'est ma 1ère commande sur le site</h2>
-            <p> Je crée mon compte La Sandwicherie. C'est rapide ! </p>
+                <p> Je crée mon compte La Sandwicherie. C'est rapide ! </p>
 
-            <a href="?page=inscription" class="btn btn-default"><span class="glyphicon glyphicon-chevron-right"></span> Créer mon compte</a>
+                <a href="?page=inscription" class="btn btn-default"><span class="glyphicon glyphicon-chevron-right"></span> Créer mon compte</a>
             </div>
     </div>
 

@@ -1,4 +1,3 @@
-
 <?php
 
 foreach ($stat as $key => $val){
@@ -17,7 +16,5 @@ foreach ($stat as $key => $val){
 </div>
 
 <?php
-
 }
-
 ?> 

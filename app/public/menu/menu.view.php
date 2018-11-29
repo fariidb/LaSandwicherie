@@ -1,16 +1,18 @@
+
+
 <nav>
     <ul class="nav nav-pills">
 
 <?php
-if(isset($_GET['cat'])){
+    if(isset($_GET['cat'])){
 
-    $cat = $_GET['cat'];
+        $cat = $_GET['cat'];
 
-}else {
+    }else {
 
-    $cat = 1;
-}
-    // verifier si la table categorie est n'est pas vide
+        $cat = 1;
+    }
+    // verifier si la table categories n'est pas vide
     if($categories):
         // creer un foreach pour visualiser les données
         foreach ($categories as $key => $value) {
