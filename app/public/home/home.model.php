@@ -13,5 +13,6 @@ endif;
     $statement->execute(array($cat));
     $stat = $statement->fetchAll();
 
+    // Database::disconnect();
 
 

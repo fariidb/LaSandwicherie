@@ -1,35 +1,93 @@
-
 <?php
 
-if($_POST){
+$array = array("firstname" => "", "name" => "", "email" => "", "phone" => "", "message" => "","firstnameError" => "", "nameError" => "", "emailError" => "", "phoneError" => "", "messageError" => "", "isSuccess" => false);
 
 
-    if (!empty($_POST['name']) && !empty($_POST['firstName']) && !empty($_POST['email']) && !empty($_POST['phone']) && !empty($_POST['message'])){
-        $name             = checkInput($_POST['name']);
-        $firstName        = checkInput($_POST['firstName']);
-        $email            = checkInput($_POST['email']);
-        $telephone        = checkInput($_POST['phone']);
-        $message          = checkInput($_POST['message']);
+$emailTo = "farid.b94@gmail.com";
 
-        $db = Database::connect();
-        $sql = "INSERT INTO messages(`id`, `nom`, `prenom`, `email`, `tel`, `message` ) VALUES(DEFAULT, '".$name."', '".$firstName."', '".$email."', '".$telephone."',  '".$message."')";
-        $req = $db->exec($sql);
-        $_SESSION['error'] = array("msg"=>"Votre message a été bien envoyé", "color"=>"success");
-        exit(header('location: ?page=contact'));
+if ($_SERVER["REQUEST_METHOD"] == "POST")
+{
+    $array["firstname"] = verifyInput($_POST["firstname"]);
+    $array["name"] = verifyInput($_POST["name"]);
+    $array["email"] = verifyInput($_POST["email"]);
+    $array["phone"] = verifyInput($_POST["phone"]);
+    $array["message"] = verifyInput($_POST["message"]);
+    $array["isSuccess"] = true;
+    $emailText = "";
 
-    }else {
-
-
-        $_SESSION['error'] = array("msg"=>"Il faut completer les champs!", "color"=>"danger");
-
+    if (empty($array["firstname"]))
+    {
+        $array["firstnameError"] = "Champs prenom vide";
+        $array["isSuccess"] = false;
+    }
+    else
+    {
+        $emailText .= "Firstname: {$array["firstname"]}\n";
+    }
+    if (empty($array["name"]))
+    {
+        $array["nameError"] = "Champs nom vide";
+        $array["isSuccess"] = false;
+    }
+    else
+    {
+        $emailText .= "Name: {$array["name"]}\n";
+    }
+    if(!isEmail($array["email"]))
+    {
+        $array["emailError"] = "Champs email vide";
+        $array["isSuccess"] = false;
+    }
+    else
+    {
+        $emailText .= "Email: {$array["email"]}\n";
+    }
+    if (!isPhone($array["phone"]))
+    {
+        $array["phoneError"] = "Champs phone vide, seul les chiffres & les espaces sont accepté";
+        $array["isSuccess"] = false;
+    }
+    else
+    {
+        $emailText .= "Telephone: {$array["phone"]}\n";
+    }
+    if (empty($array["message"]))
+    {
+        $array["messageError"] = "Champs message vide";
+        $array["isSuccess"] = false;
+    }
+    else
+    {
+        $emailText .= "Message: {$array["message"]}\n";
+    }
+    if ($array["isSuccess"])
+    {
+        $headers = "From: {$array["firstname"]} {$array["name"]} <{$array["email"]}>\r\nReply-To: {$array["email"]}";
+        mail($emailTo, "Un message de votre site", $emailText, $headers);
     }
 
+    echo json_encode($array);
+
+}
+//    Filtre de validation telephone
+function isPhone($var)
+{
+    return preg_match("/^[0-9 ]*$/", $var);
 }
 
-function checkInput($data)
+//    Filtre de validation d'email
+function isEmail($var)
 {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
+    return filter_var($var, FILTER_VALIDATE_EMAIL);
 }
+
+//    Methode qui verifie les input
+function verifyInput($var)
+{
+    $var = trim($var);
+    $var = stripslashes($var);
+    $var = htmlspecialchars($var);
+    return $var;
+}
+
+?>
