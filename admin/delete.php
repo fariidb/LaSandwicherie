@@ -1,5 +1,3 @@
-
-
 <?php
 require 'database.php';
 
@@ -32,7 +30,7 @@ function checkInput($data)
 <!doctype html>
 <html>
 <head>
-    <title>La Sandwicherie</title>
+    <title>Burger Code</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width:device-width, initial-scale:1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -43,7 +41,7 @@ function checkInput($data)
 </head>
 
 <body>
-<h1 class="text-logo"><span class="glyphicon glyphicon-cutlery"></span> La Sandwicherie <span class="glyphicon glyphicon-cutlery"></span></h1>
+<h1 class="text-logo"><span class="glyphicon glyphicon-cutlery"></span> Burger Code Hallal <span class="glyphicon glyphicon-cutlery"></span></h1>
 
 <div class="container admin">
     <div class="row">
@@ -63,5 +61,6 @@ function checkInput($data)
     </div>
 </div>
 </body>
+
 
 </html>

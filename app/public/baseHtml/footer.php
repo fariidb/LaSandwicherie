@@ -1,4 +1,4 @@
-        <!-- <div class="container-fluid">
+        <div class="container-fluid">
 
             <div class="hidden-print">
                 <div class="container">
@@ -69,7 +69,7 @@
         </div>
 
         </div>
-    </div> -->
+    </div>
     <script src="./js/jquery.min.js"></script>
     <script src="./js/script.js"></script>
 </body>

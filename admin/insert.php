@@ -1,4 +1,3 @@
-
 <?php
 require 'database.php';
 
@@ -85,7 +84,7 @@ if (!empty($_POST))
 }
 
 
-// Méthode qui permet de "nettoyer" les données
+
 function checkInput($data)
 {
     $data = trim($data);
@@ -94,11 +93,10 @@ function checkInput($data)
     return $data;
 }
 ?>
-
 <!doctype html>
 <html>
 <head>
-    <title>La sandwicherie</title>
+    <title>Burger Code</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width:device-width, initial-scale:1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -107,8 +105,9 @@ function checkInput($data)
     <link href="https://fonts.googleapis.com/css?family=Holtwood+One+SC" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
-<h1 class="text-logo"><span class="glyphicon glyphicon-cutlery"></span> La sandwicherie <span class="glyphicon glyphicon-cutlery"></span></h1>
+<h1 class="text-logo"><span class="glyphicon glyphicon-cutlery"></span> Burger Code Hallal <span class="glyphicon glyphicon-cutlery"></span></h1>
 
 <div class="container admin">
     <div class="row">
@@ -158,7 +157,10 @@ function checkInput($data)
         </div>
         </form>
 
+
     </div>
 </div>
 </body>
+
+
 </html>

@@ -12,6 +12,6 @@ endif;
     $statement = $db->prepare("SELECT * FROM items WHERE category ='".$cat."'");
     $statement->execute(array($cat));
     $stat = $statement->fetchAll();
-
+    Database::disconnect();
 
 

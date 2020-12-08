@@ -1,10 +1,6 @@
 body
 {
-    background: url("../img/bg4.png");
-}
-a
-{
-    text-decoration: none;
+    background: url("../img/bg.png");
 }
 .site
 {
@@ -70,7 +66,7 @@ a
 }
 .nav>li>a:focus, .nav>li>a:hover
 {
-    color: #E25501;
+    color: #2D3664;
     background-color: #eee;
 }
 .nav>li>a
@@ -164,7 +160,7 @@ p.red
     background: #333;
     border-color: #ffa500;
 }
-.button2
+#button2
 {
     border: 1px solid #ddd;
     background: darkgreen;
@@ -176,7 +172,7 @@ p.red
     border-radius: 5px;
     transition: all 0.3s ease-in 0s;
 }
-.button2:hover
+#button2:hover
 {
     background: #333;
     border-color: green;
@@ -209,24 +205,4 @@ footer h3, footer h4 {
     font-weight: bold;
     text-transform: uppercase;
     color: #fff;
-}
-
-/* PANIER */
-
-#TotalPanier
-{
-    font-size: 30px;
-    color: #E25501;
-}
-#LabelTotalPanier
-{
-    font-size: 20px;
-}
-.ttc
-{
-    border: 1px solid transparent;
-}
-.qte
-{
-    border: 1px solid transparent;
 }
